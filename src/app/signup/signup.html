@@ -32,7 +32,7 @@
 
         <div class="mb-3">
           <label>Age</label>
-          <input type="text" [(ngModel)]="formData.age" name="age"
+          <input type="number" [(ngModel)]="formData.age" name="age"
                  class="form-control" [class.is-invalid]="errorAge">
           <div class="invalid-feedback" *ngIf="errorAge">
             Please enter a valid age between 1 and 120
@@ -42,7 +42,7 @@
         <div class="mb-3">
           <label >Password
           </label>
-           <input type="text" [(ngModel)]="formData.password" name="password"
+           <input type="password" [(ngModel)]="formData.password" name="password"
                  class="form-control" [class.is-invalid]="errorPassword">
               <div class="invalid-feedback" *ngIf="errorPassword">
             Please enter a valid Password with min 8 characters
@@ -51,7 +51,7 @@
          <div class="mb-3">
           <label >Confirm Password
           </label>
-           <input type="text" [(ngModel)]="formData.confirmPassword" name="confirmPassword"
+           <input type="password" [(ngModel)]="formData.confirmPassword" name="confirmPassword"
                  class="form-control" [class.is-invalid]="errorConfirmPassword">
               <div class="invalid-feedback" *ngIf="errorConfirmPassword">
             Password and Confirm Password must be same
