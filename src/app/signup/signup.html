@@ -1,0 +1,65 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="mb-4 text-center">Register Your Details Here</h2>
+      <form (ngSubmit)="handleSubmit()" novalidate>
+        <div class="mb-3">
+          <label>Name</label>
+          <input type="text" [(ngModel)]="formData.name" name="name"
+                 class="form-control" [class.is-invalid]="errorName">
+          <div class="invalid-feedback" *ngIf="errorName">
+            Please enter a valid name
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="email" [(ngModel)]="formData.email" name="email"
+                 class="form-control" [class.is-invalid]="errorEmail">
+          <div class="invalid-feedback" *ngIf="errorEmail">
+            Please enter a valid email
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label>Phone</label>
+          <input type="text" [(ngModel)]="formData.phone" name="phone"
+                 class="form-control" [class.is-invalid]="errorPhone">
+          <div class="invalid-feedback" *ngIf="errorPhone">
+            Please enter a valid 10-digit phone number
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label>Age</label>
+          <input type="text" [(ngModel)]="formData.age" name="age"
+                 class="form-control" [class.is-invalid]="errorAge">
+          <div class="invalid-feedback" *ngIf="errorAge">
+            Please enter a valid age between 1 and 120
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label >Password
+          </label>
+           <input type="text" [(ngModel)]="formData.password" name="password"
+                 class="form-control" [class.is-invalid]="errorPassword">
+              <div class="invalid-feedback" *ngIf="errorPassword">
+            Please enter a valid Password with min 8 characters
+          </div>   
+        </div>
+         <div class="mb-3">
+          <label >Confirm Password
+          </label>
+           <input type="text" [(ngModel)]="formData.confirmPassword" name="confirmPassword"
+                 class="form-control" [class.is-invalid]="errorConfirmPassword">
+              <div class="invalid-feedback" *ngIf="errorConfirmPassword">
+            Password and Confirm Password must be same
+          </div>   
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
